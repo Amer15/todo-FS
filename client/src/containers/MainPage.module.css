@@ -1,0 +1,121 @@
+.mainContainer{
+    background-color: #f7b42c;
+    background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+    width: 100%;
+    margin: 0px auto;
+    min-height: 100vh;
+}
+
+.inputContainer{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+
+.inputContainer h1{
+    color: #ffffff;
+}
+
+.todosContainer{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal{
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    right: 60px;
+    bottom: 60px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modalHeading{
+    text-align: center;
+    color: #fc575e;
+}
+
+.modalForm{
+    margin: 10px auto;
+    width: 80%;
+    background: rgb(14, 6, 80);
+    color: white;
+    padding: 18px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.modalForm input{
+    padding: 12px 4px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    width: 50%;
+}
+
+.btnGroup{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.btnGroup button{
+    padding: 12px 26px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.closeBtn{
+  background: rgb(241, 49, 49);
+}
+
+.updateBtn{
+   background: rgb(32, 155, 32);
+}
+
+
+@media only screen and (max-width: 750px) {
+    .inputContainer{
+        height: 100px;
+        padding: 4px 0;
+    }
+
+    .inputContainer h1{
+        font-size: 22px;
+    }
+
+    .Modal{
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        right: 10px;
+        bottom: 15px;
+    }
+
+    .modalForm{
+        width: 90%;
+    }
+    
+    .modalForm input{
+        width: 80%;
+        padding-left: 5px;
+    }
+}

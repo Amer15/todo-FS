@@ -1,0 +1,57 @@
+.inputContainer{
+  background: #ffff;
+  width: 60%;
+  padding: 8px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputContainer input{
+  padding: 10px 8px;
+  width: 65%;
+  margin-right: 5px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-family: 'Recursive', sans-serif;
+}
+
+.inputContainer input::placeholder{
+  font-family: 'Recursive', sans-serif;
+}
+
+.inputContainer button{
+  padding: 10px 16px;
+  border-radius: 4px;
+  background: #ffffff;
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  outline: none;
+  color: #ffffff;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+@media only screen and (max-width: 750px) {
+  .inputContainer{
+    padding: 5px 3px;
+    border-radius: 6px;
+  }
+
+  .inputContainer input{
+    width: 55%;
+    padding: 5px 3px;
+    margin-right: 3px;
+    font-size: 12px;
+  }
+
+  .inputContainer button{
+    padding: 5px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  
+}

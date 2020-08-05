@@ -1,0 +1,85 @@
+.todoContainer{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #ffffff;
+    margin: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0px 0px 7px 0px rgba(128,121,128,1);
+}
+
+.todoContainerChecked{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #ffffff;
+    margin: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0px 0px 7px 0px rgba(128,121,128,1);
+    opacity: 0.6;
+}
+
+.todoBox{
+   width: 70%;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.check{
+    text-decoration: line-through;
+}
+
+.uncheck{
+    text-decoration: none;
+}
+
+.deleteBtn,
+.checkBtn,
+.editBtn{
+    background: #ffffff;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checkBtn{
+    color: rgb(45, 177, 45);
+}
+
+.deleteBtn{
+    color: rgb(223, 86, 86);
+}
+
+.editBtn{
+    color: rgb(79, 79, 192);
+}
+
+
+
+@media only screen and (max-width: 750px) {
+    
+    .todoContainer{
+        width: 70%;
+        margin: 8px 0;
+        border-radius: 6px;
+        box-shadow: 0px 0px 7px 0px rgba(128,121,128,1);
+        padding: 0 3px;
+    }
+
+    .todoBox,
+    .deleteBtn,
+    .checkBtn,
+    .editBtn{
+        font-size: 10px;
+    } 
+
+    .todoBox{
+       padding: 0 3px 0 5px;
+     }
+}
