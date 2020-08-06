@@ -11,7 +11,7 @@ const path = require('path');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-const PORT = process.env.PORT || process.env.NODE_PORT || 8000;
+const PORT = process.env.PORT || process.env.NODE_PORT || 5000;
 
 if(process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'));
