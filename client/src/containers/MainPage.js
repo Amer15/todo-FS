@@ -31,14 +31,21 @@ class MainPage extends Component {
 
         axios.get('/')
             .then(response => {
+                // console.log(response)
                 this.setState({
                     todos: response.data.todos,
                     loading: false
                 });
             })
             .catch(error => {
-                console.log(error)
+                console.log(error);
+                const errorObj = {
+                    message: 'could not load todos. Connection Error'
+                }
+                const todos = [];
+                todos.push(errorObj);
                 this.setState({
+                    todo: todos,
                     loading: false
                 });
             })

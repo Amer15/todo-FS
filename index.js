@@ -6,11 +6,12 @@ const cors = require('cors');
 require('dotenv').config();
 const todoRoutes = require('./server/routes/todo');
 const app = express();
+const path = require('path');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-const PORT =  process.env.NODE_PORT || 8000;
+const PORT = process.env.PORT || process.env.NODE_PORT || 8000;
 
 if(process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'));
@@ -29,5 +30,13 @@ mongoose.connect(process.env.MONGODB_URI ,{
 },()=> console.log(`MongoDB connected.`));
 
 app.use('/api/todos', todoRoutes);
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname + '/client/build/index.html'));
+    });
+}
 
 app.listen(PORT, () => console.log(`Server started at ${PORT}`));

@@ -4,8 +4,9 @@ import './index.css';
 import App from './App';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:8000/api/todos';
+axios.defaults.baseURL = process.env.SERVER_URL;
 
+// 'http://localhost:8000/api/todos'
 
 ReactDOM.render(
   <React.StrictMode>
