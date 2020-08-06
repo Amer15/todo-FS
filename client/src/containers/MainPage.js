@@ -29,7 +29,7 @@ class MainPage extends Component {
             loading: true
         });
 
-        axios.get('/')
+        axios.get('/api/todos')
             .then(response => {
                 // console.log(response)
                 this.setState({
