@@ -69,7 +69,7 @@ class MainPage extends Component {
             return
         }
 
-        axios.post('/add-todo', todoObj)
+        axios.post('api/todos/add-todo', todoObj)
             .then(response => {
                 // console.log(response);
                 newTodos.push(response.data.todo);
@@ -89,7 +89,7 @@ class MainPage extends Component {
         this.setState({
             loading: true
         });
-        axios.delete(`/delete-todo/${id}`)
+        axios.delete(`api/todos/delete-todo/${id}`)
             .then(response => {
                 console.log(response);
                 const todos = [...this.state.todos];
@@ -140,7 +140,7 @@ class MainPage extends Component {
 
       filteredTodo.todo = this.state.todo;
       
-      axios.put(`/update-todo/${filteredTodo._id}`, filteredTodo)
+      axios.put(`api/todos/update-todo/${filteredTodo._id}`, filteredTodo)
       .then(response => {
          console.log(response);
       })
@@ -155,7 +155,7 @@ class MainPage extends Component {
 
     //Change todo state when clicked on Mark complete button
     onMarkCompleteHandler = (todoId) => {
-        axios.put(`/update-todo-state/${todoId}`)
+        axios.put(`api/todos/update-todo-state/${todoId}`)
         .then(response => {
             const Newtodos = [...this.state.todos];
             Newtodos.forEach( todo => {
